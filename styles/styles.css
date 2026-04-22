@@ -400,6 +400,11 @@ header {
   z-index: 111;
 }
 
+/* Fixed header is out of document flow; offset main so first headings are not covered */
+main {
+  padding-top: max(var(--nav-height), 90px);
+}
+
 header .header,
 footer .footer {
   visibility: hidden;
@@ -628,6 +633,7 @@ main .cards-container {
   perspective: initial;
   overflow: initial;
   min-height: 100px;
+  padding-top: 0;
 }
 .adobe-ue-edit main .hero-container, .adobe-ue-preview main .hero-container {
   margin: initial !important;
